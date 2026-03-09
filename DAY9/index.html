@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Your Information
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: lightyellow;
+            color : rgb(180, 70, 88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        #form-group{
+            background-color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin-top: 10%;
+        }
+        .btn{
+            background-color: rgb(180, 70, 88);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="form-group">
+        <h2>Your Information</h2>
+    <form action="">
+        <div class="div1">
+            <label>Name : </label>
+            <input type="text",id = 'name', placeholder="Enter your Name"> <br> <br>
+        </div>
+        <div class="div2">
+           <label>Email : </label>
+            <input type="email",id = 'email', placeholder="Enter your Email"> <br> <br>
+        </div>
+        <div class="div3">
+           <label>Password :</label>
+            <input type="password",id = 'pass', placeholder="Enter your Password"> <br> <br> 
+        </div>
+         <div class="div3">
+           <label>Phone Number :</label>
+            <input type="number",id = 'num', placeholder="Enter your Phone Number"> <br> <br>
+        </div>
+        <button class="btn">
+            submit
+        </button>
+    </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Admin Dashboard</h2>
+
+<div class="row mb-4">
+
+  <div class="col-md-6">
+    <div class="card text-white bg-primary shadow">
+      <div class="card-body">
+        <h5>Total Users</h5>
+        <h2>{{ total_users }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card text-white bg-success shadow">
+      <div class="card-body">
+        <h5>Total Posts</h5>
+        <h2>{{ total_posts }}</h2>
+      </div>
+    </div>
+  </div>
+
+</div>
+<h4>All Users</h4>
+
+{% for user in users %}
+<div class="d-flex justify-content-between align-items-center border p-2 mb-2">
+
+  <div>
+    <strong>{{ user.username }}</strong>
+    <small class="text-muted">- {{ user.role }}</small>
+  </div>
+
+  {% if user.id != current_user.id %}
+  <a href="{{ url_for('main.change_role', user_id=user.id, new_role='user') }}"
+               class="btn btn-sm btn-outline-secondary">User</a>
+
+            <a href="{{ url_for('main.change_role', user_id=user.id, new_role='author') }}"
+               class="btn btn-sm btn-outline-primary">Author</a>
+
+            <a href="{{ url_for('main.change_role', user_id=user.id, new_role='admin') }}"
+               class="btn btn-sm btn-outline-danger">Admin</a>
+  <form action="{{ url_for('main.delete_user', user_id=user.id) }}"
+        method="POST"
+        onsubmit="return confirm('Are you sure you want to delete this user?');">
+      <button type="submit" class="btn btn-danger btn-sm">
+          Delete
+      </button>
+  </form>
+  {% endif %}
+
+</div>
+{% endfor %}
+
+<hr>
+
+<h4>All Posts</h4>
+
+
+{% for post in posts %}
+  <div class="d-flex justify-content-between align-items-center border p-2 mb-2">
+    
+    <div>
+      <strong>{{ post.title }}</strong>
+      <small class="text-muted">by {{ post.author.username }}</small>
+    </div>
+
+    <form action="{{ url_for('main.delete_post', post_id=post.id) }}"
+          method="POST"
+          onsubmit="return confirm('Are you sure you want to delete this post?');">
+        <button type="submit" class="btn btn-danger btn-sm">
+            Delete
+        </button>
+    </form>
+
+  </div>
+{% endfor %}
+
+{% endblock %}

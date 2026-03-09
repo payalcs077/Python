@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>Welcome {{ user.name }}</h1>
+
+    <p><strong>Email:</strong> {{ user.email }}</p>
+
+    <img src="{{ user.picture }}" alt="Profile Picture" width="150">
+
+    <br><br>
+
+    <a href="/">Login Again</a>
+</body>
+</html>

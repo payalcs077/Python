@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "payal-simple-math-utils"
+version = "0.1.2"
+description = "A simple Python package"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Payal Rani", email = "bharadwajpayal143@gmail.com" }
+]
+
+[tool.setuptools]
+packages = ["payal_simple_math_utils"]

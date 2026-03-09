@@ -1,0 +1,19 @@
+{%extends "base.html" %}
+{% block title %} login {% endblock %}
+{% block content %}
+   <form class="row g-3" method="POST">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" name="input_data">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" name="input_password">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+<h3> The data incoming is {{dataincoming}}</h3>
+
+{% endblock %}

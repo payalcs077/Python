@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payal Rani | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --purple: #c7c3f4;
+  --purple-dark: #8b85d9;
+  --peach: #ffe5d3;
+  --bg: #f3f2fb;
+  --text: #2e2e38;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #e9e7fb, #f6f5ff);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.hero {
+  background: var(--purple);
+  border-radius: 22px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* SECTION */
+.section {
+  margin-top: 60px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--purple-dark);
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* EXPERIENCE */
+.experience-card h3 {
+  margin-bottom: 8px;
+}
+
+/* CONTACT */
+.contact {
+  background: var(--peach);
+  border-radius: 22px;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 8px 12px;
+  text-decoration: none;
+  color: var(--purple-dark);
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media(max-width:600px){
+  .hero h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Payal Rani</h1>
+    <p>M.Tech AI/ML Student | Tech Enthusiast</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="card about">
+      <p>
+        I am a first-year M.Tech student specializing in Artificial Intelligence and Machine Learning,
+        focused on building a strong foundation in core AI/ML concepts. I am learning how intelligent
+        systems work and developing problem-solving skills through academic study, with the goal of
+        preparing for future research and real-world applications.
+      </p>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="grid">
+      <div class="card experience-card">
+        <h3>Oracle Database Administrator in DXC Technology</h3>
+        <p><strong>Experience:</strong> 2.11 Years</p>
+        <p>
+          Worked on database monitoring, backup & recovery, user management,
+          and performance support for Oracle databases in production environments.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AI/ML Learning Journey</h3>
+        <p>Conceptual learning of machine learning algorithms, data analysis, and AI fundamentals.</p>
+        <p><strong>Status:</strong> In Progress</p>
+      </div>
+
+      <div class="card">
+        <h3>Upcoming AI/ML Projects</h3>
+        <p>Future academic and practical projects related to Artificial Intelligence and Machine Learning.</p>
+        <p><strong>Status:</strong> Planned</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section">
+    <div class="contact">
+      <h2>Let’s Connect ✨</h2>
+      <p>📞 9682644282</p>
+      <p>📧 bharadwajpayal143@gmail.com</p>
+      <a href="https://github.com/payalcs077" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/payal077" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Payal Rani | Portfolio
+  </footer>
+
+</div>
+
+</body>
+</html>
